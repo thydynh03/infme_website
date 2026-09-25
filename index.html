@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Nguyễn Văn A — Contact & Digital Card</title>
+    
+    <meta name="description" content="Connect with Nguyễn Văn A via phone, Zalo, Telegram, Facebook, or email. Digital business card and direct contact links." />
+    <meta name="keywords" content="Nguyễn Văn A, digital business card, contact, product designer, developer, portfolio" />
+    <meta name="author" content="Nguyễn Văn A" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Nguyễn Văn A — Digital Contact Card" />
+    <meta property="og:description" content="Connect with Nguyễn Văn A via phone, Zalo, Telegram, Facebook, or email." />
+    <meta property="og:site_name" content="Nguyễn Văn A Contact" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Nguyễn Văn A — Digital Contact Card" />
+    <meta name="twitter:description" content="Connect with Nguyễn Văn A via phone, Zalo, Telegram, Facebook, or email." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Mobile Theme Color -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f8fa" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0d10" />
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Prevent Theme Flash -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('app-theme');
+          var isDark = saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen bg-[#f8f8fa] dark:bg-[#0c0d10] text-[#121316] dark:text-[#f4f4f6] selection:bg-neutral-200 dark:selection:bg-neutral-800 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

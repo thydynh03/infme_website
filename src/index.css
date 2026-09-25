@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #f8f8fa;
+    --surface: #ffffff;
+    --surface-hover: #f4f4f7;
+    --border: #e4e4e7;
+    --text-primary: #121316;
+    --text-secondary: #5a5f6d;
+    --text-muted: #8c919e;
+  }
+
+  .dark {
+    --bg-page: #0c0d10;
+    --surface: #141519;
+    --surface-hover: #1b1d22;
+    --border: #23252d;
+    --text-primary: #f4f4f6;
+    --text-secondary: #9ea3b0;
+    --text-muted: #656975;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Subtle, smooth transition for dark mode toggles */
+body, a, button, div, span, header, footer {
+  transition-property: background-color, border-color;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
